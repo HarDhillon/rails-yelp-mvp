@@ -1,3 +1,6 @@
 <% @restaurants.each do |restaurant| %>
-  <p><%= restaurant.name %> || <%= restaurant.address %> Road || <%= restaurant.phone_number %> || <%= restaurant.category %></p>
+  
+  <%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> || <%= restaurant.category %></p>
 <% end %>
+
+<%= link_to "New Restaurant", "/restaurants/new" %>
